@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:  lightgreen;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: rgb(0, 123, 255); 
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 30px auto;
+    background-color: rgb(205, 232, 241);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(242, 242, 242); 
+}
+
+td a {
+    display: inline-block;
+    background-color: rgb(0, 123, 255); 
+    color: rgb(255,255,255);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+td a:hover {
+    background-color: rgb(0, 86, 179); 
+}

@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(144, 238, 144); 
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+td {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 255); 
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
