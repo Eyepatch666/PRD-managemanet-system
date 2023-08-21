@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 18, 2023 at 01:00 PM
+-- Generation Time: Aug 21, 2023 at 07:25 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -32,6 +32,14 @@ CREATE TABLE `featspec` (
   `specid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `featspec`
+--
+
+INSERT INTO `featspec` (`fid`, `specid`) VALUES
+(8, 5),
+(9, 6);
+
 -- --------------------------------------------------------
 
 --
@@ -48,7 +56,8 @@ CREATE TABLE `features` (
 --
 
 INSERT INTO `features` (`fid`, `fname`) VALUES
-(1, 'fname');
+(8, 'okk?'),
+(9, 'this is feature 2');
 
 -- --------------------------------------------------------
 
@@ -58,17 +67,15 @@ INSERT INTO `features` (`fid`, `fname`) VALUES
 
 CREATE TABLE `projects` (
   `pid` int(11) NOT NULL,
-  `pname` varchar(100) NOT NULL,
-  `fname` varchar(100) NOT NULL,
-  `specname` varchar(100) NOT NULL
+  `pname` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `projects`
 --
 
-INSERT INTO `projects` (`pid`, `pname`, `fname`, `specname`) VALUES
-(6, '', '', '');
+INSERT INTO `projects` (`pid`, `pname`) VALUES
+(10, 'we do');
 
 -- --------------------------------------------------------
 
@@ -80,6 +87,13 @@ CREATE TABLE `projfeat` (
   `pid` int(11) NOT NULL,
   `fid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `projfeat`
+--
+
+INSERT INTO `projfeat` (`pid`, `fid`) VALUES
+(10, 8);
 
 -- --------------------------------------------------------
 
@@ -100,7 +114,8 @@ CREATE TABLE `spec` (
 --
 
 INSERT INTO `spec` (`specid`, `specname`, `ustory`, `ac`, `tag`) VALUES
-(3, 'ok', 'ok', 'ok', 'ok');
+(5, 'ok', 'ok', 'ok', 'ok'),
+(6, 'finished', 'it', 'finally', 'heavens!');
 
 -- --------------------------------------------------------
 
@@ -120,7 +135,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`userid`, `username`, `role`, `password`) VALUES
-(1, 'Salehin', 'analyst', 'pass');
+(1, 'Salehin', 'analyst', 'pass'),
+(2, 'Ifty', 'admin', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -158,19 +174,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `features`
 --
 ALTER TABLE `features`
-  MODIFY `fid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `fid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `spec`
 --
 ALTER TABLE `spec`
-  MODIFY `specid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `specid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`
